@@ -217,24 +217,24 @@ function googleJsonp(action, params={}){
     document.body.appendChild(script);
   });
 }
-function googlePost(action, payload){
+async function googlePost(action, payload){
   const url=googleUrl();
-  if(!url) return Promise.reject(new Error('Add a Google Apps Script URL in Settings first.'));
-  return new Promise((resolve,reject)=>{
-    const token='save_'+Date.now()+'_'+Math.floor(Math.random()*100000);
-    const iframe=document.createElement('iframe');
-    iframe.name='googleSyncFrame_'+token;
-    iframe.style.display='none';
-    const form=document.createElement('form');
-    form.method='POST'; form.action=url; form.target=iframe.name; form.style.display='none';
-    const fields={action, token, data:JSON.stringify(payload)};
-    Object.entries(fields).forEach(([k,v])=>{const i=document.createElement('input'); i.name=k; i.value=v; form.appendChild(i);});
-    function cleanup(){window.removeEventListener('message', onMsg); form.remove(); iframe.remove(); clearTimeout(timer);}
-    function onMsg(ev){const data=ev.data||{}; if(data.token!==token) return; cleanup(); data.ok ? resolve(data) : reject(new Error(data.message||'Google save failed'));}
-    const timer=setTimeout(()=>{cleanup(); reject(new Error('Google save timed out'));}, 45000);
-    window.addEventListener('message', onMsg);
-    document.body.appendChild(iframe); document.body.appendChild(form); form.submit();
+  if(!url) throw new Error('Add a Google Apps Script URL in Settings first.');
+
+  // Google Apps Script Web Apps cannot be displayed in an iframe on GitHub Pages.
+  // This sends the save directly. Because this uses no-cors, the browser cannot
+  // read the response, so verify by checking the Sheet or using Load From Google.
+  const body = new URLSearchParams();
+  body.set('action', action);
+  body.set('data', JSON.stringify(payload));
+
+  await fetch(url, {
+    method: 'POST',
+    mode: 'no-cors',
+    body
   });
+
+  return { ok: true, message: 'Save sent to Google Sheets. Check the Sheet or use Load From Google to verify.' };
 }
 function normalizeLoadedState(data){
   const loaded=data.data||data;
