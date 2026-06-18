@@ -6,7 +6,7 @@
 <title>Checking Ledger</title>
 <style>
 :root{--bg:#101318;--panel:#171b22;--panel2:#202632;--text:#ecf0f6;--muted:#a6adbb;--line:#303846;--accent:#78a6ff;--danger:#ff6b6b;--good:#55d68a;--warn:#ffc857;--shadow:0 12px 30px rgba(0,0,0,.35)}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}.app{min-height:100vh}.topbar{display:flex;align-items:center;gap:12px;padding:12px 16px;background:#0b0d12;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}.brand{font-weight:800;font-size:18px;margin-right:auto}.nav button,.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:10px;padding:8px 11px;cursor:pointer}.nav button.active,.btn.primary{background:var(--accent);color:#08111f;border-color:var(--accent);font-weight:700}.btn.danger{background:transparent;color:var(--danger);border-color:var(--danger)}.btn.good{background:transparent;color:var(--good);border-color:var(--good)}main{padding:16px}.cards{display:grid;grid-template-columns:repeat(4,minmax(160px,1fr));gap:12px;margin-bottom:12px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:var(--shadow)}.label{color:var(--muted);font-size:12px}.value{font-size:24px;font-weight:800;margin-top:5px}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.toolbar input,.toolbar select,.toolbar textarea,.modal input,.modal select,.modal textarea{background:#0d1016;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:9px;min-height:38px}.toolbar input{min-width:240px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}.tablewrap{overflow:auto;max-height:calc(100vh - 285px)}table{width:100%;border-collapse:collapse;white-space:nowrap}th,td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left}th{background:#12161d;position:sticky;top:0;z-index:2;cursor:pointer;color:#cfd6e6}tr:hover{background:#1c2230}.right{text-align:right}.muted{color:var(--muted)}.editable{cursor:text}.editable:focus{outline:2px solid var(--accent);background:#0d1016;border-radius:6px}.badge{display:inline-flex;align-items:center;justify-content:center;min-width:62px;border:1px solid var(--line);border-radius:999px;padding:3px 8px;cursor:pointer;background:#0d1016;color:var(--muted)}.badge.on{color:#06130b;background:var(--good);border-color:var(--good);font-weight:800}.badge.warn.on{background:var(--warn);border-color:var(--warn);color:#171100}.page{display:none}.page.active{display:block}.modalBackdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.62);z-index:50;align-items:center;justify-content:center;padding:16px}.modalBackdrop.show{display:flex}.modal{width:min(760px,100%);background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:16px}.modal h2{margin:0 0 12px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.grid label{display:flex;flex-direction:column;gap:4px;color:var(--muted)}.modalActions{display:flex;gap:8px;justify-content:flex-end;margin-top:14px}.small{font-size:12px}.hidden{display:none!important}.status{color:var(--muted);font-size:12px;margin-left:8px}@media(max-width:800px){.cards{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.nav{display:flex;gap:6px;flex-wrap:wrap}.tablewrap{max-height:none}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}.app{min-height:100vh}.topbar{display:flex;align-items:center;gap:12px;padding:12px 16px;background:#0b0d12;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}.brand{font-weight:800;font-size:18px;margin-right:auto}.nav button,.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:10px;padding:8px 11px;cursor:pointer}.nav button.active,.btn.primary{background:var(--accent);color:#08111f;border-color:var(--accent);font-weight:700}.btn.danger{background:transparent;color:var(--danger);border-color:var(--danger)}.btn.good{background:transparent;color:var(--good);border-color:var(--good)}main{padding:16px}.cards{display:grid;grid-template-columns:repeat(4,minmax(160px,1fr));gap:12px;margin-bottom:12px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:var(--shadow)}.label{color:var(--muted);font-size:12px}.value{font-size:24px;font-weight:800;margin-top:5px}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.toolbar input,.toolbar select,.toolbar textarea,.modal input,.modal select,.modal textarea{background:#0d1016;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:9px;min-height:38px}.toolbar input{min-width:240px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}.tablewrap{overflow:auto;max-height:calc(100vh - 285px)}table{width:100%;border-collapse:collapse;white-space:nowrap}th,td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left}th{background:#12161d;position:sticky;top:0;z-index:2;cursor:pointer;color:#cfd6e6}tr:hover{background:#1c2230}.right{text-align:right}.muted{color:var(--muted)}.editable{cursor:text}.editable:focus{outline:2px solid var(--accent);background:#0d1016;border-radius:6px}.badge{display:inline-flex;align-items:center;justify-content:center;min-width:62px;border:1px solid var(--line);border-radius:999px;padding:3px 8px;cursor:pointer;background:#0d1016;color:var(--muted)}.badge.on{color:#06130b;background:var(--good);border-color:var(--good);font-weight:800}.badge.warn.on{background:var(--warn);border-color:var(--warn);color:#171100}.page{display:none}.page.active{display:block}.modalBackdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.62);z-index:50;align-items:center;justify-content:center;padding:16px}.modalBackdrop.show{display:flex}.modal{width:min(760px,100%);background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:16px}.modal h2{margin:0 0 12px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.grid label{display:flex;flex-direction:column;gap:4px;color:var(--muted)}.modalActions{display:flex;gap:8px;justify-content:flex-end;margin-top:14px}.small{font-size:12px}.hidden{display:none!important}.status{color:var(--muted);font-size:12px;margin-left:8px}.type-toggle{position:relative;display:inline-grid;grid-template-columns:1fr 1fr;align-items:center;width:54px;height:26px;border:1px solid var(--line);border-radius:999px;background:#0d1016;cursor:pointer;user-select:none;font-size:11px;font-weight:900;overflow:hidden}.type-toggle span{position:relative;z-index:2;text-align:center}.type-toggle .knob{position:absolute;top:3px;width:20px;height:18px;border-radius:999px;transition:left .15s ease,background .15s ease,box-shadow .15s ease;z-index:1}.type-toggle.deposit .knob{left:29px;background:var(--good);box-shadow:0 0 10px var(--good)}.type-toggle.withdrawal .knob{left:4px;background:var(--danger);box-shadow:0 0 10px var(--danger)}.type-toggle.deposit .d{color:#caffdc}.type-toggle.withdrawal .w{color:#ffd0d0}.amount-with-type{display:flex;align-items:center;gap:8px}.amount-with-type input{flex:1;min-width:0}.type-cell{display:flex;justify-content:center}.type-filter{min-width:135px}@media(max-width:800px){.cards{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.nav{display:flex;gap:6px;flex-wrap:wrap}.tablewrap{max-height:none}}
 </style>
 </head>
 <body>
@@ -36,10 +36,11 @@
         <button class="btn" id="exportJsonBtn">Export Backup</button>
         <button class="btn" id="topLedgerBtn">Top</button>
         <button class="btn" id="bottomLedgerBtn">Bottom</button>
-        <input id="searchBox" placeholder="Search date, payee, comment, check #, amount..." />
+        <input id="searchBox" placeholder="Search date, payee, comment, check #, amount, D/W..." />
         <select id="paidFilter"><option value="">Paid: All</option><option value="true">Paid</option><option value="false">Not Paid</option></select>
         <select id="clearedFilter"><option value="">Cleared: All</option><option value="true">Cleared</option><option value="false">Not Cleared</option></select>
         <select id="taxFilter"><option value="">Tax: All</option><option value="true">Tax</option><option value="false">Not Tax</option></select>
+        <select id="typeFilter" class="type-filter"><option value="">Type: All</option><option value="W">Withdrawals</option><option value="D">Deposits</option></select>
         <input id="modifiedAfter" type="datetime-local" title="Modified after" />
       </div>
       <div class="panel"><div class="tablewrap" id="ledgerWrap"><table id="ledgerTable"></table></div></div>
@@ -83,7 +84,7 @@
     <label>Entered<input id="txnEntered" type="date"></label>
     <label>Check # / Ref<input id="txnCheck"></label>
     <label>Payee<input id="txnPayee"></label>
-    <label>Amount<input id="txnAmount" type="number" step="0.01"><span class="small muted">Negative = withdrawal, positive = deposit</span></label>
+    <label>Amount<div class="amount-with-type"><input id="txnAmount" type="number" step="0.01" min="0"><button type="button" id="txnTypeToggle" class="type-toggle withdrawal" title="Click to switch Deposit/Withdrawal"><span class="w">W</span><span class="d">D</span><span class="knob"></span></button><input id="txnType" type="hidden" value="W"></div><span class="small muted">Amount is always positive. W subtracts, D adds.</span></label>
     <label>Comment<input id="txnComment"></label>
     <label>Paid<select id="txnPaid"><option value="false">No</option><option value="true">Yes</option></select></label>
     <label>Cleared<select id="txnCleared"><option value="false">No</option><option value="true">Yes</option></select></label>
@@ -117,12 +118,33 @@ function clone(x){return JSON.parse(JSON.stringify(x));}
 function today(){return new Date().toISOString().slice(0,10);}
 function nowIso(){return new Date().toISOString();}
 function money(n){return (Number(n)||0).toLocaleString(undefined,{style:'currency',currency:'USD'});}
-function parseMoney(n){return Math.round((Number(n)||0)*100)/100;}
+function parseMoney(n){return Math.round((Number(String(n).replace(/[$,]/g,''))||0)*100)/100;}
 function bool(v){return v===true || v==='true' || v===1 || v==='1';}
+function txnType(t){return (String(t?.type||'').toUpperCase()==='D') ? 'D' : 'W';}
+function txnAbsAmount(t){return Math.abs(parseMoney(t?.amount));}
+function signedAmount(t){const amt=txnAbsAmount(t); return txnType(t)==='D' ? amt : -amt;}
+function normalizeTransaction(t){
+  if(!t) return t;
+  const rawAmount=parseMoney(t.amount);
+  if(!t.type){
+    const dep=parseMoney(t.deposit), wd=parseMoney(t.withdrawal);
+    t.type = rawAmount>0 || (dep>0 && wd===0) ? 'D' : 'W';
+  }
+  t.type = txnType(t);
+  t.amount = Math.abs(rawAmount || parseMoney(t.deposit) || parseMoney(t.withdrawal) || 0);
+  return t;
+}
+function normalizeState(data){
+  data=data||clone(ORIGINAL_DATA);
+  data.ledger=Array.isArray(data.ledger)?data.ledger.map(normalizeTransaction):[];
+  data.paychecks=Array.isArray(data.paychecks)?data.paychecks:[];
+  data.settings=data.settings||{};
+  return data;
+}
 function loadState(){
   const saved = localStorage.getItem(STORE_KEY);
-  if(saved){try{return JSON.parse(saved)}catch(e){}}
-  return clone(ORIGINAL_DATA);
+  if(saved){try{return normalizeState(JSON.parse(saved))}catch(e){}}
+  return normalizeState(clone(ORIGINAL_DATA));
 }
 function markDirty(){
   dirty=true;
@@ -162,34 +184,39 @@ document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>showPage(b.dat
 
 function calcBalances(){
   const start = Number(state.settings.startingBalance)||0;
-  const total = state.ledger.reduce((s,t)=>s+(Number(t.amount)||0), start);
-  const cleared = state.ledger.filter(t=>bool(t.cleared)).reduce((s,t)=>s+(Number(t.amount)||0), start);
+  const total = state.ledger.reduce((s,t)=>s+signedAmount(t), start);
+  const cleared = state.ledger.filter(t=>bool(t.cleared)).reduce((s,t)=>s+signedAmount(t), start);
   return {total, cleared, uncleared: total-cleared};
 }
 function render(){renderSummary(); renderLedger(); renderPaychecks(); renderSettings();}
 function renderSummary(){const b=calcBalances(); currentBalance.textContent=money(b.total); clearedBalance.textContent=money(b.cleared); unclearedBalance.textContent=money(b.uncleared); txnCount.textContent=state.ledger.length;}
 function filteredLedger(){
-  const q=searchBox.value.trim().toLowerCase(), pf=paidFilter.value, cf=clearedFilter.value, tf=taxFilter.value, ma=modifiedAfter.value ? new Date(modifiedAfter.value).getTime():0;
+  const q=searchBox.value.trim().toLowerCase(), pf=paidFilter.value, cf=clearedFilter.value, tf=taxFilter.value, yf=typeFilter.value, ma=modifiedAfter.value ? new Date(modifiedAfter.value).getTime():0;
   let rows=state.ledger.filter(t=>{
-    const withdrawal = Number(t.amount)<0 ? Math.abs(Number(t.amount)) : '';
-    const deposit = Number(t.amount)>0 ? Number(t.amount) : '';
-    const hay=[t.id,t.transactionDate,t.entered,t.checkNumber,t.payee,t.comment,t.amount,money(t.amount),withdrawal,deposit].join(' ').toLowerCase();
+    const amount = txnAbsAmount(t);
+    const type = txnType(t);
+    const hay=[t.id,t.transactionDate,t.entered,t.checkNumber,t.payee,t.comment,amount,money(amount),type].join(' ').toLowerCase();
     if(q && !hay.includes(q)) return false;
+    if(yf && type!==yf) return false;
     if(pf!=='' && String(bool(t.paid))!==pf) return false;
     if(cf!=='' && String(bool(t.cleared))!==cf) return false;
     if(tf!=='' && String(bool(t.tax))!==tf) return false;
     if(ma && (!t.modifiedAt || new Date(t.modifiedAt).getTime()<ma)) return false;
     return true;
   });
-  rows.sort((a,b)=>compare(a[sort.key],b[sort.key])*sort.dir);
+  rows.sort((a,b)=>{
+    const av=sort.key==='amount'?txnAbsAmount(a):sort.key==='type'?txnType(a):a[sort.key];
+    const bv=sort.key==='amount'?txnAbsAmount(b):sort.key==='type'?txnType(b):b[sort.key];
+    return compare(av,bv)*sort.dir;
+  });
   return rows;
 }
 function compare(a,b){ if(a==null)a=''; if(b==null)b=''; if(!isNaN(a)&&!isNaN(b)) return Number(a)-Number(b); return String(a).localeCompare(String(b)); }
 function renderLedger(){
-  const cols=[['id','ID'],['transactionDate','Txn Date'],['entered','Entered'],['payee','Payee'],['comment','Comment'],['checkNumber','Check #'],['amount','Amount'],['paid','Paid'],['cleared','Cleared'],['tax','Tax'],['modifiedAt','Modified'],['actions','']];
+  const cols=[['id','ID'],['transactionDate','Txn Date'],['entered','Entered'],['payee','Payee'],['comment','Comment'],['checkNumber','Check #'],['type','Type'],['amount','Amount'],['paid','Paid'],['cleared','Cleared'],['tax','Tax'],['modifiedAt','Modified'],['actions','']];
   let html='<thead><tr>'+cols.map(c=>`<th data-key="${c[0]}">${c[1]}</th>`).join('')+'</tr></thead><tbody>';
   for(const t of filteredLedger()){
-    html+=`<tr data-id="${t.id}"><td>${t.id}</td>${editableTd(t,'transactionDate',t.transactionDate||'')}${editableTd(t,'entered',t.entered||'')}${editableTd(t,'payee',t.payee||'')}${editableTd(t,'comment',t.comment||'')}${editableTd(t,'checkNumber',t.checkNumber||'')}${editableTd(t,'amount',money(t.amount),'right')}<td>${badge(t.id,'paid',t.paid)}</td><td>${badge(t.id,'cleared',t.cleared)}</td><td>${badge(t.id,'tax',t.tax,'warn')}</td><td class="small muted">${t.modifiedAt?new Date(t.modifiedAt).toLocaleString():''}</td><td><button class="btn" onclick="editTxn(${t.id})">Edit</button> <button class="btn danger" onclick="deleteTxn(${t.id})">Delete</button></td></tr>`;
+    html+=`<tr data-id="${t.id}"><td>${t.id}</td>${editableTd(t,'transactionDate',t.transactionDate||'')}${editableTd(t,'entered',t.entered||'')}${editableTd(t,'payee',t.payee||'')}${editableTd(t,'comment',t.comment||'')}${editableTd(t,'checkNumber',t.checkNumber||'')}<td class="type-cell">${typeToggle(t.id, txnType(t))}</td>${editableTd(t,'amount',money(txnAbsAmount(t)),'right')}<td>${badge(t.id,'paid',t.paid)}</td><td>${badge(t.id,'cleared',t.cleared)}</td><td>${badge(t.id,'tax',t.tax,'warn')}</td><td class="small muted">${t.modifiedAt?new Date(t.modifiedAt).toLocaleString():''}</td><td><button class="btn" onclick="editTxn(${t.id})">Edit</button> <button class="btn danger" onclick="deleteTxn(${t.id})">Delete</button></td></tr>`;
   }
   html+='</tbody>'; ledgerTable.innerHTML=html;
   ledgerTable.querySelectorAll('th[data-key]').forEach(th=>{th.onclick=()=>{const k=th.dataset.key;if(k==='actions')return; if(sort.key===k)sort.dir*=-1; else sort={key:k,dir:1}; renderLedger();};});
@@ -203,12 +230,17 @@ function renderLedger(){
   });
 }
 function editableTd(t,field,value,cls=''){return `<td class="editable ${cls}" contenteditable="true" data-id="${t.id}" data-field="${field}">${esc(value)}</td>`;}
+function typeToggle(id,type){const deposit=type==='D'; return `<button type="button" class="type-toggle ${deposit?'deposit':'withdrawal'}" onclick="toggleTxnType(${id})" title="${deposit?'Deposit':'Withdrawal'}"><span class="w">W</span><span class="d">D</span><span class="knob"></span></button>`;}
+function toggleTxnType(id){const t=state.ledger.find(x=>Number(x.id)===Number(id)); if(!t)return; t.type=txnType(t)==='D'?'W':'D'; t.amount=txnAbsAmount(t); t.modifiedAt=nowIso(); markDirty(); render();}
+function setTxnTypeControl(type){const v=type==='D'?'D':'W'; txnType.value=v; txnTypeToggle.classList.toggle('deposit',v==='D'); txnTypeToggle.classList.toggle('withdrawal',v!=='D');}
+function toggleTxnModalType(){setTxnTypeControl(txnType.value==='D'?'W':'D');}
+
 function commitLedgerCell(td){
   const id=Number(td.dataset.id), field=td.dataset.field;
   const t=state.ledger.find(x=>Number(x.id)===id); if(!t)return;
   const original=td.dataset.original??''; const raw=td.textContent.trim();
   if(raw===original) return;
-  if(field==='amount') t[field]=parseMoney(raw);
+  if(field==='amount') t[field]=Math.abs(parseMoney(raw));
   else t[field]=raw;
   t.modifiedAt=nowIso();
   markDirty();
@@ -220,10 +252,24 @@ function toggleField(id,field){const t=state.ledger.find(x=>x.id===id); if(!t)re
 function scrollLedgerToBottom(){ledgerWrap.scrollTop=ledgerWrap.scrollHeight; window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'});}
 function scrollLedgerToTop(){ledgerWrap.scrollTop=0; window.scrollTo({top:0,behavior:'smooth'});}
 
-function openTxnModal(t){ editingTxnId=t?.id||null; txnModalTitle.textContent=editingTxnId?'Edit Transaction':'Add Transaction'; txnDate.value=t?.transactionDate||today(); txnEntered.value=t?.entered||today(); txnCheck.value=t?.checkNumber||''; txnPayee.value=t?.payee||''; txnAmount.value=t?.amount??''; txnComment.value=t?.comment||''; txnPaid.value=String(bool(t?.paid)); txnCleared.value=String(bool(t?.cleared)); txnTax.value=String(bool(t?.tax)); txnModal.classList.add('show'); }
+function openTxnModal(t){
+  editingTxnId=t?.id||null;
+  txnModalTitle.textContent=editingTxnId?'Edit Transaction':'Add Transaction';
+  txnDate.value=t?.transactionDate||today();
+  txnEntered.value=t?.entered||today();
+  txnCheck.value=t?.checkNumber||'';
+  txnPayee.value=t?.payee||'';
+  txnAmount.value=editingTxnId?txnAbsAmount(t):'';
+  setTxnTypeControl(editingTxnId?txnType(t):'W');
+  txnComment.value=t?.comment||'';
+  txnPaid.value=String(bool(t?.paid));
+  txnCleared.value=String(bool(t?.cleared));
+  txnTax.value=String(bool(t?.tax));
+  txnModal.classList.add('show');
+}
 function closeTxnModal(){txnModal.classList.remove('show');}
 function saveTxn(){
-  const data={transactionDate:txnDate.value, entered:txnEntered.value||today(), checkNumber:txnCheck.value, payee:txnPayee.value, amount:parseMoney(txnAmount.value), comment:txnComment.value, paid:bool(txnPaid.value), cleared:bool(txnCleared.value), tax:bool(txnTax.value), modifiedAt:nowIso()};
+  const data={transactionDate:txnDate.value, entered:txnEntered.value||today(), checkNumber:txnCheck.value, payee:txnPayee.value, type:txnType.value==='D'?'D':'W', amount:Math.abs(parseMoney(txnAmount.value)), comment:txnComment.value, paid:bool(txnPaid.value), cleared:bool(txnCleared.value), tax:bool(txnTax.value), modifiedAt:nowIso()};
   if(editingTxnId){Object.assign(state.ledger.find(x=>x.id===editingTxnId), data);} else {data.id=Number(state.settings.nextID)||nextId(); state.settings.nextID=data.id+1; data.sourceTemplateID=''; data.batchID=''; state.ledger.push(data);}
   markDirty(); closeTxnModal(); render();
 }
@@ -241,7 +287,7 @@ function addPaycheck(){
   const batch='PC'+num+'-'+Date.now();
   for(const p of rows){
     const id=Number(state.settings.nextID)||nextId(); state.settings.nextID=id+1;
-    state.ledger.push({id, transactionDate:'', entered, modifiedAt:nowIso(), checkNumber:'', payee:p.bill, comment:p.comment||String(num), amount:-Math.abs(Number(p.amount)||0), paid:false, cleared:false, tax:bool(p.tax), sourceTemplateID:p.id, batchID:batch});
+    state.ledger.push({id, transactionDate:'', entered, modifiedAt:nowIso(), checkNumber:'', payee:p.bill, comment:p.comment||String(num), type:'W', amount:Math.abs(Number(p.amount)||0), paid:false, cleared:false, tax:bool(p.tax), sourceTemplateID:p.id, batchID:batch});
   }
   state.settings.lastPaycheckAdded=String(num); markDirty(); closePaycheckModal(); render();
 }
@@ -299,7 +345,7 @@ function normalizeLoadedState(data){
   loaded.settings=Object.assign({}, state.settings, loaded.settings||{});
   loaded.settings.googleScriptUrl=state.settings.googleScriptUrl;
   loaded.settings.autoGoogleSync=state.settings.autoGoogleSync;
-  return loaded;
+  return normalizeState(loaded);
 }
 async function saveGoogle(silent=false){
   try{
@@ -319,10 +365,10 @@ async function loadGoogle(silent=false){
   }catch(err){setStatus('Google load failed'); if(!silent) alert(err.message);}
 }
 async function saveAll(){saveLocal(); if(googleUrl()) await saveGoogle(true);}
-function resetOriginal(){if(confirm('Reset to the original exported data? Local edits will be overwritten.')){state=clone(ORIGINAL_DATA); localDirty=true; dirty=true; saveLocal(); render();}}
+function resetOriginal(){if(confirm('Reset to the original exported data? Local edits will be overwritten.')){state=normalizeState(clone(ORIGINAL_DATA)); localDirty=true; dirty=true; saveLocal(); render();}}
 
-addTxnBtn.onclick=()=>openTxnModal(); txnSaveBtn.onclick=saveTxn; addPaycheckBtn.onclick=openPaycheckModal; confirmPaycheckBtn.onclick=addPaycheck; saveBtn.onclick=saveAll; exportJsonBtn.onclick=exportBackup; topLedgerBtn.onclick=scrollLedgerToTop; bottomLedgerBtn.onclick=scrollLedgerToBottom; saveSettingsBtn.onclick=saveSettings; resetBtn.onclick=resetOriginal; saveGoogleBtn.onclick=saveGoogle; loadGoogleBtn.onclick=loadGoogle; importJsonInput.onchange=e=>e.target.files[0]&&importBackup(e.target.files[0]);
-[searchBox,paidFilter,clearedFilter,taxFilter,modifiedAfter,paycheckSearch].forEach(el=>el&&el.addEventListener('input',render));
+addTxnBtn.onclick=()=>openTxnModal(); txnTypeToggle.onclick=toggleTxnModalType; txnSaveBtn.onclick=saveTxn; addPaycheckBtn.onclick=openPaycheckModal; confirmPaycheckBtn.onclick=addPaycheck; saveBtn.onclick=saveAll; exportJsonBtn.onclick=exportBackup; topLedgerBtn.onclick=scrollLedgerToTop; bottomLedgerBtn.onclick=scrollLedgerToBottom; saveSettingsBtn.onclick=saveSettings; resetBtn.onclick=resetOriginal; saveGoogleBtn.onclick=saveGoogle; loadGoogleBtn.onclick=loadGoogle; importJsonInput.onchange=e=>e.target.files[0]&&importBackup(e.target.files[0]);
+[searchBox,paidFilter,clearedFilter,taxFilter,typeFilter,modifiedAfter,paycheckSearch].forEach(el=>el&&el.addEventListener('input',render));
 render();
 setStatus(dirty ? 'Unsaved Google changes' : 'Loaded');
 setTimeout(()=>{ if(state.settings.googleScriptUrl && state.settings.autoGoogleSync) loadGoogle(true); }, 400);
