@@ -6,7 +6,7 @@
 <title>Checking Ledger</title>
 <style>
 :root{--bg:#101318;--panel:#171b22;--panel2:#202632;--text:#ecf0f6;--muted:#a6adbb;--line:#303846;--accent:#78a6ff;--danger:#ff6b6b;--good:#55d68a;--warn:#ffc857;--shadow:0 12px 30px rgba(0,0,0,.35)}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}.app{min-height:100vh}.topbar{display:flex;align-items:center;gap:12px;padding:12px 16px;background:#0b0d12;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}.brand{font-weight:800;font-size:18px;margin-right:auto}.nav button,.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:10px;padding:8px 11px;cursor:pointer}.nav button.active,.btn.primary{background:var(--accent);color:#08111f;border-color:var(--accent);font-weight:700}.btn.danger{background:transparent;color:var(--danger);border-color:var(--danger)}.btn.good{background:transparent;color:var(--good);border-color:var(--good)}main{padding:16px}.cards{display:grid;grid-template-columns:repeat(4,minmax(160px,1fr));gap:12px;margin-bottom:12px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:var(--shadow)}.label{color:var(--muted);font-size:12px}.value{font-size:24px;font-weight:800;margin-top:5px}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.toolbar input,.toolbar select,.toolbar textarea,.modal input,.modal select,.modal textarea{background:#0d1016;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:9px;min-height:38px}.toolbar input{min-width:240px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}.tablewrap{overflow:auto;max-height:calc(100vh - 285px)}table{width:100%;border-collapse:collapse;white-space:nowrap}th,td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left}th{background:#12161d;position:sticky;top:0;z-index:2;cursor:pointer;color:#cfd6e6}tr:hover{background:#1c2230}.right{text-align:right}.muted{color:var(--muted)}.badge{display:inline-flex;align-items:center;justify-content:center;min-width:62px;border:1px solid var(--line);border-radius:999px;padding:3px 8px;cursor:pointer;background:#0d1016;color:var(--muted)}.badge.on{color:#06130b;background:var(--good);border-color:var(--good);font-weight:800}.badge.warn.on{background:var(--warn);border-color:var(--warn);color:#171100}.page{display:none}.page.active{display:block}.modalBackdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.62);z-index:50;align-items:center;justify-content:center;padding:16px}.modalBackdrop.show{display:flex}.modal{width:min(760px,100%);background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:16px}.modal h2{margin:0 0 12px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.grid label{display:flex;flex-direction:column;gap:4px;color:var(--muted)}.modalActions{display:flex;gap:8px;justify-content:flex-end;margin-top:14px}.small{font-size:12px}.hidden{display:none!important}.status{color:var(--muted);font-size:12px;margin-left:8px}@media(max-width:800px){.cards{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.nav{display:flex;gap:6px;flex-wrap:wrap}.tablewrap{max-height:none}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}.app{min-height:100vh}.topbar{display:flex;align-items:center;gap:12px;padding:12px 16px;background:#0b0d12;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}.brand{font-weight:800;font-size:18px;margin-right:auto}.nav button,.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:10px;padding:8px 11px;cursor:pointer}.nav button.active,.btn.primary{background:var(--accent);color:#08111f;border-color:var(--accent);font-weight:700}.btn.danger{background:transparent;color:var(--danger);border-color:var(--danger)}.btn.good{background:transparent;color:var(--good);border-color:var(--good)}main{padding:16px}.cards{display:grid;grid-template-columns:repeat(4,minmax(160px,1fr));gap:12px;margin-bottom:12px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:var(--shadow)}.label{color:var(--muted);font-size:12px}.value{font-size:24px;font-weight:800;margin-top:5px}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.toolbar input,.toolbar select,.toolbar textarea,.modal input,.modal select,.modal textarea{background:#0d1016;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:9px;min-height:38px}.toolbar input{min-width:240px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}.tablewrap{overflow:auto;max-height:calc(100vh - 285px)}table{width:100%;border-collapse:collapse;white-space:nowrap}th,td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left}th{background:#12161d;position:sticky;top:0;z-index:2;cursor:pointer;color:#cfd6e6}tr:hover{background:#1c2230}.right{text-align:right}.muted{color:var(--muted)}.editable{cursor:text}.editable:focus{outline:2px solid var(--accent);background:#0d1016;border-radius:6px}.badge{display:inline-flex;align-items:center;justify-content:center;min-width:62px;border:1px solid var(--line);border-radius:999px;padding:3px 8px;cursor:pointer;background:#0d1016;color:var(--muted)}.badge.on{color:#06130b;background:var(--good);border-color:var(--good);font-weight:800}.badge.warn.on{background:var(--warn);border-color:var(--warn);color:#171100}.page{display:none}.page.active{display:block}.modalBackdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.62);z-index:50;align-items:center;justify-content:center;padding:16px}.modalBackdrop.show{display:flex}.modal{width:min(760px,100%);background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:16px}.modal h2{margin:0 0 12px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.grid label{display:flex;flex-direction:column;gap:4px;color:var(--muted)}.modalActions{display:flex;gap:8px;justify-content:flex-end;margin-top:14px}.small{font-size:12px}.hidden{display:none!important}.status{color:var(--muted);font-size:12px;margin-left:8px}@media(max-width:800px){.cards{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.nav{display:flex;gap:6px;flex-wrap:wrap}.tablewrap{max-height:none}}
 </style>
 </head>
 <body>
@@ -34,12 +34,15 @@
         <button class="btn good" id="addPaycheckBtn">Add Paycheck</button>
         <button class="btn" id="saveBtn">Save</button>
         <button class="btn" id="exportJsonBtn">Export Backup</button>
-        <input id="searchBox" placeholder="Search payee/comment/check #..." />
+        <button class="btn" id="topLedgerBtn">Top</button>
+        <button class="btn" id="bottomLedgerBtn">Bottom</button>
+        <input id="searchBox" placeholder="Search date, payee, comment, check #, amount..." />
         <select id="paidFilter"><option value="">Paid: All</option><option value="true">Paid</option><option value="false">Not Paid</option></select>
         <select id="clearedFilter"><option value="">Cleared: All</option><option value="true">Cleared</option><option value="false">Not Cleared</option></select>
+        <select id="taxFilter"><option value="">Tax: All</option><option value="true">Tax</option><option value="false">Not Tax</option></select>
         <input id="modifiedAfter" type="datetime-local" title="Modified after" />
       </div>
-      <div class="panel"><div class="tablewrap"><table id="ledgerTable"></table></div></div>
+      <div class="panel"><div class="tablewrap" id="ledgerWrap"><table id="ledgerTable"></table></div></div>
     </section>
 
     <section id="page-paychecks" class="page">
@@ -166,12 +169,15 @@ function calcBalances(){
 function render(){renderSummary(); renderLedger(); renderPaychecks(); renderSettings();}
 function renderSummary(){const b=calcBalances(); currentBalance.textContent=money(b.total); clearedBalance.textContent=money(b.cleared); unclearedBalance.textContent=money(b.uncleared); txnCount.textContent=state.ledger.length;}
 function filteredLedger(){
-  const q=searchBox.value.trim().toLowerCase(), pf=paidFilter.value, cf=clearedFilter.value, ma=modifiedAfter.value ? new Date(modifiedAfter.value).getTime():0;
+  const q=searchBox.value.trim().toLowerCase(), pf=paidFilter.value, cf=clearedFilter.value, tf=taxFilter.value, ma=modifiedAfter.value ? new Date(modifiedAfter.value).getTime():0;
   let rows=state.ledger.filter(t=>{
-    const hay=[t.payee,t.comment,t.checkNumber,t.id].join(' ').toLowerCase();
+    const withdrawal = Number(t.amount)<0 ? Math.abs(Number(t.amount)) : '';
+    const deposit = Number(t.amount)>0 ? Number(t.amount) : '';
+    const hay=[t.id,t.transactionDate,t.entered,t.checkNumber,t.payee,t.comment,t.amount,money(t.amount),withdrawal,deposit].join(' ').toLowerCase();
     if(q && !hay.includes(q)) return false;
     if(pf!=='' && String(bool(t.paid))!==pf) return false;
     if(cf!=='' && String(bool(t.cleared))!==cf) return false;
+    if(tf!=='' && String(bool(t.tax))!==tf) return false;
     if(ma && (!t.modifiedAt || new Date(t.modifiedAt).getTime()<ma)) return false;
     return true;
   });
@@ -183,14 +189,36 @@ function renderLedger(){
   const cols=[['id','ID'],['transactionDate','Txn Date'],['entered','Entered'],['payee','Payee'],['comment','Comment'],['checkNumber','Check #'],['amount','Amount'],['paid','Paid'],['cleared','Cleared'],['tax','Tax'],['modifiedAt','Modified'],['actions','']];
   let html='<thead><tr>'+cols.map(c=>`<th data-key="${c[0]}">${c[1]}</th>`).join('')+'</tr></thead><tbody>';
   for(const t of filteredLedger()){
-    html+=`<tr><td>${t.id}</td><td>${esc(t.transactionDate||'')}</td><td>${esc(t.entered||'')}</td><td>${esc(t.payee)}</td><td>${esc(t.comment)}</td><td>${esc(t.checkNumber||'')}</td><td class="right">${money(t.amount)}</td><td>${badge(t.id,'paid',t.paid)}</td><td>${badge(t.id,'cleared',t.cleared)}</td><td>${badge(t.id,'tax',t.tax,'warn')}</td><td class="small muted">${t.modifiedAt?new Date(t.modifiedAt).toLocaleString():''}</td><td><button class="btn" onclick="editTxn(${t.id})">Edit</button> <button class="btn danger" onclick="deleteTxn(${t.id})">Delete</button></td></tr>`;
+    html+=`<tr data-id="${t.id}"><td>${t.id}</td>${editableTd(t,'transactionDate',t.transactionDate||'')}${editableTd(t,'entered',t.entered||'')}${editableTd(t,'payee',t.payee||'')}${editableTd(t,'comment',t.comment||'')}${editableTd(t,'checkNumber',t.checkNumber||'')}${editableTd(t,'amount',money(t.amount),'right')}<td>${badge(t.id,'paid',t.paid)}</td><td>${badge(t.id,'cleared',t.cleared)}</td><td>${badge(t.id,'tax',t.tax,'warn')}</td><td class="small muted">${t.modifiedAt?new Date(t.modifiedAt).toLocaleString():''}</td><td><button class="btn" onclick="editTxn(${t.id})">Edit</button> <button class="btn danger" onclick="deleteTxn(${t.id})">Delete</button></td></tr>`;
   }
   html+='</tbody>'; ledgerTable.innerHTML=html;
   ledgerTable.querySelectorAll('th[data-key]').forEach(th=>{th.onclick=()=>{const k=th.dataset.key;if(k==='actions')return; if(sort.key===k)sort.dir*=-1; else sort={key:k,dir:1}; renderLedger();};});
+  ledgerTable.querySelectorAll('td.editable').forEach(td=>{
+    td.addEventListener('focus',()=>td.dataset.original=td.textContent);
+    td.addEventListener('blur',()=>commitLedgerCell(td));
+    td.addEventListener('keydown',e=>{
+      if(e.key==='Enter'){e.preventDefault(); td.blur();}
+      if(e.key==='Escape'){e.preventDefault(); td.textContent=td.dataset.original||''; td.blur();}
+    });
+  });
+}
+function editableTd(t,field,value,cls=''){return `<td class="editable ${cls}" contenteditable="true" data-id="${t.id}" data-field="${field}">${esc(value)}</td>`;}
+function commitLedgerCell(td){
+  const id=Number(td.dataset.id), field=td.dataset.field;
+  const t=state.ledger.find(x=>Number(x.id)===id); if(!t)return;
+  const original=td.dataset.original??''; const raw=td.textContent.trim();
+  if(raw===original) return;
+  if(field==='amount') t[field]=parseMoney(raw);
+  else t[field]=raw;
+  t.modifiedAt=nowIso();
+  markDirty();
+  render();
 }
 function badge(id,field,val,extra=''){return `<span class="badge ${extra} ${bool(val)?'on':''}" onclick="toggleField(${id},'${field}')">${bool(val)?'Yes':'No'}</span>`;}
 function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
 function toggleField(id,field){const t=state.ledger.find(x=>x.id===id); if(!t)return; t[field]=!bool(t[field]); t.modifiedAt=nowIso(); markDirty(); render();}
+function scrollLedgerToBottom(){ledgerWrap.scrollTop=ledgerWrap.scrollHeight; window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'});}
+function scrollLedgerToTop(){ledgerWrap.scrollTop=0; window.scrollTo({top:0,behavior:'smooth'});}
 
 function openTxnModal(t){ editingTxnId=t?.id||null; txnModalTitle.textContent=editingTxnId?'Edit Transaction':'Add Transaction'; txnDate.value=t?.transactionDate||today(); txnEntered.value=t?.entered||today(); txnCheck.value=t?.checkNumber||''; txnPayee.value=t?.payee||''; txnAmount.value=t?.amount??''; txnComment.value=t?.comment||''; txnPaid.value=String(bool(t?.paid)); txnCleared.value=String(bool(t?.cleared)); txnTax.value=String(bool(t?.tax)); txnModal.classList.add('show'); }
 function closeTxnModal(){txnModal.classList.remove('show');}
@@ -293,8 +321,8 @@ async function loadGoogle(silent=false){
 async function saveAll(){saveLocal(); if(googleUrl()) await saveGoogle(true);}
 function resetOriginal(){if(confirm('Reset to the original exported data? Local edits will be overwritten.')){state=clone(ORIGINAL_DATA); localDirty=true; dirty=true; saveLocal(); render();}}
 
-addTxnBtn.onclick=()=>openTxnModal(); txnSaveBtn.onclick=saveTxn; addPaycheckBtn.onclick=openPaycheckModal; confirmPaycheckBtn.onclick=addPaycheck; saveBtn.onclick=saveAll; exportJsonBtn.onclick=exportBackup; saveSettingsBtn.onclick=saveSettings; resetBtn.onclick=resetOriginal; saveGoogleBtn.onclick=saveGoogle; loadGoogleBtn.onclick=loadGoogle; importJsonInput.onchange=e=>e.target.files[0]&&importBackup(e.target.files[0]);
-[searchBox,paidFilter,clearedFilter,modifiedAfter,paycheckSearch].forEach(el=>el&&el.addEventListener('input',render));
+addTxnBtn.onclick=()=>openTxnModal(); txnSaveBtn.onclick=saveTxn; addPaycheckBtn.onclick=openPaycheckModal; confirmPaycheckBtn.onclick=addPaycheck; saveBtn.onclick=saveAll; exportJsonBtn.onclick=exportBackup; topLedgerBtn.onclick=scrollLedgerToTop; bottomLedgerBtn.onclick=scrollLedgerToBottom; saveSettingsBtn.onclick=saveSettings; resetBtn.onclick=resetOriginal; saveGoogleBtn.onclick=saveGoogle; loadGoogleBtn.onclick=loadGoogle; importJsonInput.onchange=e=>e.target.files[0]&&importBackup(e.target.files[0]);
+[searchBox,paidFilter,clearedFilter,taxFilter,modifiedAfter,paycheckSearch].forEach(el=>el&&el.addEventListener('input',render));
 render();
 setStatus(dirty ? 'Unsaved Google changes' : 'Loaded');
 setTimeout(()=>{ if(state.settings.googleScriptUrl && state.settings.autoGoogleSync) loadGoogle(true); }, 400);
