@@ -44,7 +44,7 @@ table{width:100%;border-collapse:separate;border-spacing:0;white-space:nowrap}th
   <span class="demoBadge">DEMO MODE</span>
   <div class="spacer"></div>
   <span id="dirtyStatus" class="status">Loaded</span>
-  <button class="version versionBtn" id="versionLabel" title="What\'s New">v0.6.1</button>
+  <button class="version versionBtn" id="versionLabel" title="What's New">v0.6.2</button>
 </header>
 <nav class="nav">
   <button data-screen="ledger" class="active">Ledger</button>
@@ -102,7 +102,7 @@ table{width:100%;border-collapse:separate;border-spacing:0;white-space:nowrap}th
   </div>
 </section>
 </main>
-<footer class="footer">Checking Ledger <span id="footVersion">v0.6.1</span></footer>
+<footer class="footer">Checking Ledger <span id="footVersion">v0.6.2</span></footer>
 </div>
 
 <div class="modal" id="txnModal"><div class="dialog">
@@ -141,11 +141,11 @@ table{width:100%;border-collapse:separate;border-spacing:0;white-space:nowrap}th
   <div class="actions"><button data-close>Cancel</button></div>
 </div></div>
 
-<div class="whatsNew" id="whatsNew"><b>What's New — v0.6.1</b><ul><li>Top / Bottom buttons are visible above the ledger on iPad.</li><li>Bottom button jumps to the inline add row.</li><li>Version moved to the top-right and opens this changelog.</li><li>Inline new transaction row remains at the bottom.</li></ul><button id="dismissNews" class="small">Got it</button></div>
+<div class="whatsNew" id="whatsNew"><b>What's New — v0.6.2</b><ul><li>Fixed the JavaScript syntax error that stopped all button click handlers from loading.</li><li>Settings, version details, dialogs, and ledger controls are clickable again.</li></ul><button id="dismissNews" class="small">Got it</button></div>
 
 <script>
 'use strict';
-const APP_VERSION='v0.6.1';
+const APP_VERSION='v0.6.2';
 const DEMO_PIN='4209';
 const LS_KEY='checkingLedgerState_v1';
 const LS_SETTINGS='checkingLedgerSettings_v1';
@@ -233,7 +233,7 @@ function newTxnRowHtml(){return `<tr class="newTxnRow">
  <td><input id="newDate" type="date" value="${today()}"></td><td class="hideTablet">${today()}</td><td><input id="newCheck" placeholder="Check #"></td><td><input id="newPayee" placeholder="Payee"></td><td class="hidePhone"><input id="newComment" placeholder="Comment"></td>
  <td><span id="newType" class="toggle right" title="Withdrawal"><span class="knob">W</span></span></td><td><input id="newAmount" type="number" step="0.01" min="0" placeholder="0.00"></td>
  <td><span id="newPaid" class="toggle left" title="No"><span class="knob">N</span></span></td><td><span id="newCleared" class="toggle left" title="No"><span class="knob">N</span></span></td><td><span id="newTax" class="toggle left" title="No"><span class="knob">N</span></span></td>
- <td class="muted hideTablet">new</td><td><button id="btnInlineAdd" class="small primary">Add</button></td></tr>`}"><span>No</span><span>Yes</span></span>`}
+ <td class="muted hideTablet">new</td><td><button id="btnInlineAdd" class="small primary">Add</button></td></tr>`}
 function toggleRow(el){const r=state.ledger.find(x=>x.id==el.dataset.id); if(!r)return; const f=el.dataset.field; if(f==='type') r.type=r.type==='D'?'W':'D'; else r[f]=!r[f]; r.modifiedAt=now(); markDirty(); renderAll();}
 function editCell(td){const id=num(td.closest('tr').dataset.id), f=td.dataset.f; const r=state.ledger.find(x=>x.id===id); if(!r)return; const old=f==='amount'?absAmount(r):r[f]||''; const input=document.createElement('input'); input.value=f==='amount'?absAmount(r).toFixed(2):old; input.type=f==='amount'?'number':(f==='transactionDate'||f==='entered'?'date':'text'); input.style.width='100%'; td.innerHTML=''; td.appendChild(input); input.focus(); input.select(); let done=false; const save=()=>{if(done)return;done=true; let v=input.value; if(f==='amount') r.amount=Math.abs(num(v)); else r[f]=v; r.modifiedAt=now(); markDirty(); renderAll();}; const cancel=()=>{if(done)return;done=true;renderAll();}; input.onblur=save; input.onkeydown=e=>{if(e.key==='Enter')save(); if(e.key==='Escape')cancel();};}
 
